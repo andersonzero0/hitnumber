@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;900&display=swap');
+
+:root {
+    --color1: #C22C70;
+    --color2: #C8A2C8;
+    --color3: #00B2A9;
+    --color4: #40E0D0;
+    --color5: #FED65E;
+
+    --font: 'Prompt', sans-serif;;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+}
+
+main {
+    text-align: center;
+}
+
+header{
+    background-color: var(--color3);
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+}
+
+#logo {
+    font-weight: 900;
+    text-align: center;
+    font-size: 45px;
+    color: white;
+}
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-items: center;
+    width: 33.33vw;
+    margin: 20vh auto;
+    border: 3px solid black;
+    box-shadow: rgb(206, 201, 201) 10px 10px 10px;
+}
+
+.nivel {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+label {
+    margin-top: 20px;
+}
+
+.nivel_select {
+    margin: 20px 0px;
+}
+
+#nivel {
+    background-color: var(--color1);
+    color: white;
+    width: 12vw;
+    height: 5vh;
+    text-align: center;
+    border: 3px solid black;
+}
+
+option {
+    background-color: var(--color2);
+}
+
+.btn-inicio {
+    margin: 20px auto;
+    width: 10vw;
+    height: 35px;
+    font-size: 15px;
+    background-color: var(--color5);
+    text-decoration: none;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-items: center;
+    width: 48vw;
+    margin: 15vh auto;
+    border: 3px solid black;
+    box-shadow: rgb(206, 201, 201) 10px 10px 10px;
+    padding-bottom: 10px;
+}
+
+#replay span{
+    font-size: 70px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: gray 3px 3px 3px;
+    border-radius: 90px;
+}
+
+.contador {
+    width: 100px;
+    border: 1px solid black;
+}
+
+#label-game {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+#numero {
+    margin: 20px 0px;
+    width: 130px;
+    height: 50px;
+    font-size: 45px;
+    text-align: center;
+    border: 3px solid var(--color1);
+    color: white;
+    -webkit-text-stroke: 3px black;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#box-ajuda {
+    margin: 20px 0px;
+}
+
+#ajuda {
+    font-weight: 900;
+    font-size: 70px;
+    -webkit-text-stroke: 10px var(--color1);
+    color: white;
+}
+
+#img-ajuda {
+    width: 70px;
+}
+
+#tentar {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 40px;
+    font-size: 22px;
+    background-color: var(--color5);
+    cursor: pointer;
+}
+
+.end {
+    border: 3px solid black;
+    box-shadow: rgb(206, 201, 201) 10px 10px 10px;
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    margin-top: 4vw;
+}
+.end-v {
+    font-weight: 900;
+    font-size: 40px;
+    -webkit-text-stroke: 3px black;
+    color: var(--color5);
+}
+
+.end-d {
+    font-weight: 900;
+    font-size: 40px;
+    -webkit-text-stroke: 3px black;
+    color: red;
+}
+
+.emoji {
+    width: 100px;
+}
+
+#p-s {
+    font-weight: 900;
+}
+
+#numeroSorte {
+    -webkit-text-stroke: 1px var(--color2);
+    color: var(--color1);
+    font-size: 50px;
+}
+
+footer p {
+    background-color: black;
+    color: white;
+    text-align: center;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Adivinhar Número</title>
+</head>
+<body>
+    <header>
+        <p id="logo">ADIVINHE O NÚMERO</p>
+    </header>
+
+    <main>
+        <div>
+
+        </div>
+        <div id="inicio">
+            <label class="nivel" for="nivel">Selecione o Nivel que Deseja Jogar!</label>
+            <div class="nivel_select">
+                <select name="nivel" id="nivel">
+                    <option value="nivel1">Nivel 1 - Entre 1 e 10</option>
+                    <option value="nivel2">Nivel 2 - Entre 1 e 100</option>
+                    <option value="nivel3">Nivel 3 - Entre 1 e 1000</option>
+                </select>
+            </div>
+
+            <button class="btn-inicio" id="confirmar">Confirmar!</button>
+            <button class="btn-inicio" id="start">Começar</button>
+        </div>
+
+        <div id="game">
+            <div id="telaGame">
+                    <p id="contador"></p>
+
+                <label id="label-game" for="numero">Digite o Número que Você acha que está escondido!</label>
+                <input type="number" name="numero" id="numero">
+                <div id="box-ajuda">
+                    <p id="ajuda"></p>
+                    <img id="img-ajuda" src="assets/imgs/interrogacao.png" alt="interrogacao">
+                </div>
+                <button id="tentar">Tentar!</button>
+            </div>
+        </div>
+
+        <div onclick="showReplay()" id="replay">
+            <span class="material-symbols-outlined">replay</span>
+            <p>Jogar Novamente!</p>
+        </div>
+        <div class="end" id="vitoria">
+            <p class="end-v">Você Venceu!</p>
+            <img class="emoji" src="assets/imgs/feliz.png" alt="feliz">
+        </div>
+        <div class="end" id="derrota">
+            <p class="end-d">Você Perdeu!</p>
+            <img class="emoji" src="assets/imgs/triste.png" alt="triste">
+        </div>
+        <p id="p-s">Número Sorteado:<p id="numeroSorte"></p></p>
+    </main>
+
+    <footer>
+        <p>GitHub: andersonzero0</p>
+    </footer>
+</body>
+</html>
+
+<script src="assets/js/script.js" type="text/javascript"></script>
