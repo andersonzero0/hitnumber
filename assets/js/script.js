@@ -26,6 +26,7 @@ ajuda.style.display = 'none';
 numeroSorte.style.display = 'none';
 p_s.style.display = 'none'
 replay.style.display = 'none'
+confirmar.focus();
 
 function showBtnStart() {
     start.style.display = 'block';
@@ -34,6 +35,7 @@ function showBtnStart() {
 confirmar.onclick = function showBtnStart() {
                         confirmar.style.display = 'none';
                         start.style.display = 'block';
+                        start.focus();
                         nivel.style.background = '#C8A2C8';
                         nivel.style.pointerEvents = 'none';
                         nivel.style.touchAction = 'none';
@@ -51,10 +53,13 @@ start.onclick = function showGame() {
                     }else if(nivelValue === 'nivel3'){
                         var vRandom = 1000;
                     }
+
+                    document.getElementById('numero').focus();
                     
                     var nSorte = Math.floor(Math.random() * vRandom) + 1;
                     numeroSorte.innerHTML = nSorte
 
+                    contador.innerHTML = i + "/5";
                     tentar.onclick = function tentativa(){
                         i++;
                         contador.innerHTML = i + "/5";
