@@ -45,11 +45,11 @@ start.onclick = function showGame() {
                     inicio.style.display = 'none';
 
                     if(nivelValue === 'nivel1'){
-                        var vRandom = 11;
+                        var vRandom = 10;
                     }else if(nivelValue === 'nivel2'){
-                        var vRandom = 101;
+                        var vRandom = 100;
                     }else if(nivelValue === 'nivel3'){
-                        var vRandom = 1001;
+                        var vRandom = 1000;
                     }
                     
                     var nSorte = Math.floor(Math.random() * vRandom) + 1;
