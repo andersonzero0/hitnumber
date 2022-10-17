@@ -5,3 +5,8 @@
     <a href="https://andersonzero0.github.io/hitnumber/">Hit Number</a>
 </p>
 <div align="center"><img src="https://img.shields.io/github/stars/andersonzero0/hitnumber?style=social"/></div>
+##
+<div align="center">
+💻 Computador CSS ✔ <br>
+📱 Mobile CSS ❌
+</div>
