@@ -85,11 +85,13 @@ start.onclick = function showGame() {
                         }else if(numero < nSorte){
                             img_ajuda.style.display = 'none'
                             ajuda.style.display = 'block';
-                            ajuda.innerHTML = '>'
+                            ajuda.innerHTML = '>';
+                            document.getElementById('numero').value = "";
                         }else if(numero > nSorte){
                             img_ajuda.style.display = 'none'
                             ajuda.style.display = 'block';
-                            ajuda.innerHTML = '<'
+                            ajuda.innerHTML = '<';
+                            document.getElementById('numero').value = "";
                         }
                     }
                 }

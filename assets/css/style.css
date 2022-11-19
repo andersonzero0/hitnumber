@@ -49,14 +49,14 @@ header{
     flex-wrap: nowrap;
     justify-content: center;
     justify-items: center;
-    width: 33.33vw;
-    margin: 20vh auto;
+    width: 500px;
+    margin: 15vh auto;
     border: 3px solid black;
     box-shadow: rgb(206, 201, 201) 10px 10px 10px;
 }
 
 .nivel {
-    font-weight: 500;
+    font-weight: 500px;
     font-size: 20px;
 }
 
@@ -71,8 +71,8 @@ label {
 #nivel {
     background-color: var(--color1);
     color: white;
-    width: 12vw;
-    height: 5vh;
+    width: 210px;
+    height: 30px;
     text-align: center;
     border: 3px solid black;
 }
@@ -83,7 +83,7 @@ option {
 
 .btn-inicio {
     margin: 20px auto;
-    width: 10vw;
+    width: 150px;
     height: 35px;
     font-size: 15px;
     background-color: var(--color5);
@@ -98,8 +98,8 @@ option {
     flex-wrap: nowrap;
     justify-content: center;
     justify-items: center;
-    width: 48vw;
-    margin: 15vh auto;
+    width: 600px;
+    margin: 10vh auto;
     border: 3px solid black;
     box-shadow: rgb(206, 201, 201) 10px 10px 10px;
     padding-bottom: 10px;
@@ -213,4 +213,46 @@ footer p {
     bottom: 0px;
     position: fixed;
     width: 100%;
+}
+
+@media only screen and (max-width: 520px) {
+    #inicio {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    #game {
+        width: 500px;
+        margin-top: 10px;
+    }
+
+    #label-game {
+        font-size: 20px;
+    }
+
+    #img-ajuda {
+        width: 60px;
+    }
+}
+
+@media only screen and (max-width: 515px) {
+    #game {
+        width: 400px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    #game {
+        width: 300px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #game {
+        width: 260px;
+        padding: 20px;
+    }
 }
