@@ -8,5 +8,5 @@
 ##
 <div align="center">
 💻 Computador CSS ✔ <br>
-📱 Mobile CSS ❌
+📱 Mobile CSS ✔
 </div>
