@@ -75,6 +75,7 @@ label {
     height: 30px;
     text-align: center;
     border: 3px solid black;
+    cursor: pointer;
 }
 
 option {
