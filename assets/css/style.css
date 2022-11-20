@@ -134,6 +134,11 @@ option {
     border: 3px solid var(--color1);
     color: white;
     -webkit-text-stroke: 3px black;
+    background-color: #C8A2C8;
+}
+
+#numero:hover {
+    background-color: var(--color1);
 }
 
 input::-webkit-outer-spin-button,
@@ -240,6 +245,10 @@ footer p {
     #game {
         width: 400px;
         padding: 20px;
+    }
+
+    .end {
+        width: 300px;
     }
 }
 

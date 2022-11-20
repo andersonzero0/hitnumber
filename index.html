@@ -36,7 +36,7 @@
                     <p id="contador"></p>
 
                 <label id="label-game" for="numero">Digite o Número que Você acha que está escondido!</label><br>
-                <input type="number" name="numero" id="numero">
+                <input type="number" name="numero" id="numero" required>
                 <div id="box-ajuda">
                     <p id="ajuda"></p>
                     <img id="img-ajuda" src="assets/imgs/interrogacao.png" alt="interrogacao">
@@ -45,19 +45,21 @@
             </div>
         </div>
 
-        <div onclick="showReplay()" id="replay">
-            <span class="material-symbols-outlined">replay</span>
-            <p>Jogar Novamente!</p>
+        <div class="end-game">
+            <div onclick="showReplay()" id="replay">
+                <span class="material-symbols-outlined">replay</span>
+                <p>Jogar Novamente!</p>
+            </div>
+            <div class="end" id="vitoria">
+                <p class="end-v">Você Venceu!</p>
+                <img class="emoji" src="assets/imgs/feliz.png" alt="feliz">
+            </div>
+            <div class="end" id="derrota">
+                <p class="end-d">Você Perdeu!</p>
+                <img class="emoji" src="assets/imgs/triste.png" alt="triste">
+            </div>
+            <p id="p-s">Número Sorteado:<p id="numeroSorte"></p></p>
         </div>
-        <div class="end" id="vitoria">
-            <p class="end-v">Você Venceu!</p>
-            <img class="emoji" src="assets/imgs/feliz.png" alt="feliz">
-        </div>
-        <div class="end" id="derrota">
-            <p class="end-d">Você Perdeu!</p>
-            <img class="emoji" src="assets/imgs/triste.png" alt="triste">
-        </div>
-        <p id="p-s">Número Sorteado:<p id="numeroSorte"></p></p>
     </main>
 
     <footer>
