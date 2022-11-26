@@ -100,10 +100,14 @@ option {
     justify-content: center;
     justify-items: center;
     width: 600px;
-    margin: 10vh auto;
+    margin: 3vh auto;
     border: 3px solid black;
     box-shadow: rgb(206, 201, 201) 10px 10px 10px;
-    padding-bottom: 10px;
+    padding-bottom: 10px;   
+}
+
+#replay {
+    cursor: pointer;
 }
 
 #replay span{
@@ -114,11 +118,51 @@ option {
     background-color: white;
     box-shadow: gray 3px 3px 3px;
     border-radius: 90px;
+    touch-action: none;
+    pointer-events: none;
 }
 
-.contador {
-    width: 100px;
-    border: 1px solid black;
+.box-contador {
+    background-color: var(--color4);
+    width: 600px;
+    border: 3px solid black;
+    box-shadow: rgb(206, 201, 201) 10px 10px 10px;
+    text-align: center;
+    margin: 3vh auto;
+    padding: 3px;
+}
+
+.box-contador {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.box-contador > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    margin: 0 10px;
+}
+
+#contador {
+    font-size: 35px;
+    font-weight: 500;
+    background-color: white;
+    width: 50px;
+    border-radius: 500px;
+}
+
+.emoji-contador {
+    transition: ease 0.5s;
+    font-size: 30px;
 }
 
 #label-game {
@@ -157,17 +201,20 @@ input[type=number] {
 
 #box-ajuda {
     margin: 20px 0px;
+    align-items: center;
 }
 
 #ajuda {
     font-weight: 900;
-    font-size: 70px;
+    font-size: 65px;
     -webkit-text-stroke: 10px var(--color1);
     color: white;
 }
 
 #img-ajuda {
-    width: 70px;
+    font-size: 65px;
+    margin: 0 auto;
+    align-items: center;
 }
 
 #tentar {
@@ -236,12 +283,12 @@ footer p {
         margin-top: 10px;
     }
 
-    #label-game {
-        font-size: 20px;
+    .box-contador {
+        width: 500px;
     }
 
-    #img-ajuda {
-        width: 60px;
+    #label-game {
+        font-size: 20px;
     }
 }
 
@@ -249,6 +296,11 @@ footer p {
     #game {
         width: 400px;
         padding: 20px;
+    }
+
+    .box-contador {
+        width: 400px;
+        padding: 5px 20px;
     }
 
     .end {
@@ -261,11 +313,21 @@ footer p {
         width: 300px;
         padding: 20px;
     }
+
+    .box-contador {
+        width: 300px;
+        padding: 5px 20px;
+    }
 }
 
 @media only screen and (max-width: 360px) {
     #game {
         width: 260px;
-        padding: 20px;
+        padding: 5px 20px;
+    }
+
+    .box-contador {
+        width: 260px;
+        padding: 5px 20px;
     }
 }

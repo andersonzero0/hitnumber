@@ -21,9 +21,9 @@
             <label class="nivel" for="nivel">Selecione o Nivel que Deseja Jogar!</label>
             <div class="nivel_select">
                 <select name="nivel" id="nivel">
-                    <option value="nivel1">Nivel 1 - Entre 1 e 10</option>
-                    <option value="nivel2">Nivel 2 - Entre 1 e 100</option>
-                    <option value="nivel3">Nivel 3 - Entre 1 e 1000</option>
+                    <option id="opt1" value="nivel1">Nivel 1 - Entre 1 e 10</option>
+                    <option id="opt2" value="nivel2">Nivel 2 - Entre 1 e 100</option>
+                    <option id="opt3" value="nivel3">Nivel 3 - Entre 1 e 1000</option>
                 </select>
             </div>
 
@@ -31,23 +31,30 @@
             <button class="btn-inicio" id="start">Começar</button>
         </div>
 
-        <div id="game">
-            <div id="telaGame">
-                    <p id="contador"></p>
+        <div class="conteiner-game" id="conteiner-game">
 
-                <label id="label-game" for="numero">Digite o Número que Você acha que está escondido!</label><br>
-                <input type="number" name="numero" id="numero" required>
-                <div id="box-ajuda">
-                    <p id="ajuda"></p>
-                    <img id="img-ajuda" src="assets/imgs/interrogacao.png" alt="interrogacao">
-                </div>
-                <button id="tentar">Tentar!</button>
+            <div class="box-contador">
+                <div><p id="contador"></p><p>/5</p></div>
+                <div><p class="emoji-contador">&#128513</p></div>
             </div>
+
+            <div id="game">
+                <div id="telaGame">
+                    <label id="label-game" for="numero">Digite o Número que Você acha que está escondido!</label><br>
+                    <input type="number" name="numero" id="numero" required>
+                    <div id="box-ajuda">
+                        <p id="ajuda"></p>
+                        <p id="img-ajuda">&#129300</p>
+                    </div>
+                    <button id="tentar">Tentar!</button>
+                </div>
+            </div>
+
         </div>
 
         <div class="end-game">
             <div onclick="showReplay()" id="replay">
-                <span class="material-symbols-outlined">replay</span>
+                <span id="replay-icon" class="material-symbols-outlined">replay</span>
                 <p>Jogar Novamente!</p>
             </div>
             <div class="end" id="vitoria">

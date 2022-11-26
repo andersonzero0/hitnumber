@@ -2,7 +2,7 @@ var inicio = document.getElementById('inicio');
 var confirmar = document.getElementById('confirmar');
 var start = document.getElementById('start');
 
-var game = document.getElementById('game');
+var conteiner_game = document.getElementById('conteiner-game');
 var telaGame = document.getElementById('telaGame');
 var contador = document.getElementById('contador');
 var nivelValue;
@@ -18,7 +18,7 @@ var replay = document.getElementById('replay');
 
 var i = 0;
 
-game.style.display = 'none';
+conteiner_game.style.display = 'none';
 start.style.display = 'none';
 vitoria.style.display = 'none';
 derrota.style.display = 'none';
@@ -32,6 +32,12 @@ function showBtnStart() {
     start.style.display = 'block';
 }
 
+document.addEventListener('keydown', (event) => {
+    if(event.code === "Enter") {
+        confirmar.click();
+    }
+})
+
 confirmar.onclick = function showBtnStart() {
                         confirmar.style.display = 'none';
                         start.style.display = 'block';
@@ -43,7 +49,7 @@ confirmar.onclick = function showBtnStart() {
                     }
 
 start.onclick = function showGame() {
-                    game.style.display = 'block';
+                    conteiner_game.style.display = 'block';
                     inicio.style.display = 'none';
 
                     if(nivelValue === 'nivel1'){
@@ -58,11 +64,34 @@ start.onclick = function showGame() {
                     
                     var nSorte = Math.floor(Math.random() * vRandom) + 1;
                     numeroSorte.innerHTML = nSorte
+                    contador.innerHTML = i;
 
-                    contador.innerHTML = i + "/5";
+                    document.addEventListener('keydown', (event) => {
+                        if(event.code === "Enter") {
+                            tentar.click();
+                        }
+                    })
+
                     tentar.onclick = function tentativa(){
                         i++;
-                        contador.innerHTML = i + "/5";
+                        contador.innerHTML = i;
+
+                        var emoji_contador = document.querySelector('.emoji-contador');
+
+                        switch (i) {
+                            case 1:
+                                emoji_contador.innerHTML = "&#128524"
+                                break
+                            case 2:
+                                emoji_contador.innerHTML = "&#128529"
+                                break
+                            case 3:
+                                emoji_contador.innerHTML = "&#128533"
+                                break
+                            case 4:
+                                emoji_contador.innerHTML = "&#128534"
+                        }
+
                         numero = document.getElementById('numero').value;
                         if(numero === ""){
                             numero = 0;
@@ -70,32 +99,51 @@ start.onclick = function showGame() {
 
                         if(i === 5 && numero != nSorte){
                             img_ajuda.style.display = 'none'
-                            game.style.display = 'none'
+                            conteiner_game.style.display = 'none'
                             derrota.style.display = 'block'
                             p_s.style.display = 'block'
                             numeroSorte.style.display = 'block'
                             replay.style.display = 'block'
+
+                            document.addEventListener('keydown', (event) => {
+                                if(event.code === "Enter") {
+                                    replay.click();
+                                }
+                            })
+
                         }else if(numero == nSorte){
                             img_ajuda.style.display = 'none'
-                            game.style.display = 'none'
+                            conteiner_game.style.display = 'none'
                             p_s.style.display = 'block'
                             vitoria.style.display = 'block'
                             numeroSorte.style.display = 'block'
                             replay.style.display = 'block'
+
+                            document.addEventListener('keydown', (event) => {
+                                if(event.code === "Enter") {
+                                    replay.click();
+                                }
+                            })
+                        
+
+
                         }else if(numero < nSorte){
                             img_ajuda.style.display = 'none'
                             ajuda.style.display = 'block';
+
                             ajuda.innerHTML = '>';
+
                             document.getElementById('numero').value = "";
                         }else if(numero > nSorte){
                             img_ajuda.style.display = 'none'
                             ajuda.style.display = 'block';
+
                             ajuda.innerHTML = '<';
+
                             document.getElementById('numero').value = "";
                         }
                     }
                 }
-
 function showReplay(){
     window.location.reload()
 }
