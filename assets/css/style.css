@@ -281,10 +281,12 @@ footer p {
     #game {
         width: 500px;
         margin-top: 10px;
+        margin: 1px auto;
     }
 
     .box-contador {
         width: 500px;
+        margin: 1px auto;
     }
 
     #label-game {
@@ -296,11 +298,13 @@ footer p {
     #game {
         width: 400px;
         padding: 20px;
+        margin: 1px auto;
     }
 
     .box-contador {
         width: 400px;
         padding: 5px 20px;
+        margin: 1px auto;
     }
 
     .end {
@@ -312,11 +316,13 @@ footer p {
     #game {
         width: 300px;
         padding: 20px;
+        margin: 1px auto;
     }
 
     .box-contador {
         width: 300px;
         padding: 5px 20px;
+        margin: 1px auto;
     }
 }
 
@@ -324,10 +330,12 @@ footer p {
     #game {
         width: 260px;
         padding: 5px 20px;
+        margin: 1px auto;
     }
 
     .box-contador {
         width: 260px;
         padding: 5px 20px;
+        margin: 1px auto;
     }
 }
