@@ -7,7 +7,7 @@
 <div align="center"><img src="https://img.shields.io/github/stars/andersonzero0/hitnumber?style=social"/></div>
 ##
 <div align="center">
-📚 HTML | CSS | JavaScript
+📚 HTML | CSS | JavaScript <br>
 💻 Computador CSS ✔ <br>
 📱 Mobile CSS ✔
 </div>
